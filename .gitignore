@@ -1,0 +1,18 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Data
+data/
+data-icaycc/
+*.nc
+*.csv
+*.zip
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/

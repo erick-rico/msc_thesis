@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Atmospheric drivers of extreme PM pollution in the Valley of Mexico"
+message: "If you use this repository, please cite it as below."
+authors:
+  - family-names: Rico Esparza
+    given-names: Erick
+    affiliation: Tampere University
+date-released: 2026-01-19
+version: 0.1
+license: MIT
