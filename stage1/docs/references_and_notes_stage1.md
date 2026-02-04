@@ -10,18 +10,34 @@
 
 ---
 
-## Notes and considerations
+## Notes and harmonic analysis
 
-- Monthly p90 thresholds are used for **exploratory purposes only** in Stage 1.
-- Event definitions will be revisited after data harmonization and sensitivity testing.
-- Diurnal PM diagnostics are intended as **descriptive indicators**, not causal attribution.
-- Station coverage varies by year; analyses rely on network-wide maxima rather than fixed stations.
-- All interpretations at this stage are preliminary.
+- Diurnal (24h) and semidiurnal (12h) harmonics are fitted to **monthly hourly climatologies**.
+- Harmonic plots represent **mean behavior**, not extremes.
+- Official thresholds are not expected to be crossed in climatological harmonic plots because:
+  - extremes are diluted by long-term averaging,
+  - contingency thresholds target rare tail events (p95–p99),
+  - and extreme PM episodes require multi-day stagnation.
 
 ---
 
-## To be added in later stages
+## Notes on official thresholds
 
-- ENSO indices (Niño-3.4, MEI)
-- Boundary-layer and ventilation proxies
-- Synoptic regime literature focused on Central Mexico
+- **NOM-172**  
+  Defines air-quality categories based on NowCast concentrations.
+
+- **PCAA (Programa para Prevenir y Responder a Contingencias Ambientales Atmosféricas)**  
+  Defines Phase I and Phase II contingencies using 24-hour moving averages (MA24).
+
+These thresholds are retained for **policy-oriented comparison**, not as the main episode definition, due to limited sample sizes and heterogeneous synoptic signatures.
+
+---
+
+## Methodological decision (Stage 1 outcome)
+
+The thesis proceeds with:
+- daily city-mean PM data,
+- percentile-based episode definitions,
+- and circulation-focused interpretation.
+
+Alternative definitions are treated as sensitivity analyses to ensure robustness without compromising methodological consistency or feasibility.

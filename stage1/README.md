@@ -18,29 +18,54 @@
 
 ## Overview
 
-Stage 1 focuses on **exploratory diagnostics** and **methodological setup** for the MSc thesis on
-extreme PM₂.₅ and PM₁₀ pollution episodes over the Valley of Mexico.
+This folder documents **Stage 1** of my MSc thesis, which focuses on exploratory analysis, data diagnostics, and the definition of extreme PM episodes to be used in subsequent synoptic and climate analyses.
 
-The main objectives of this stage are to:
-- define a robust and transparent event-selection strategy,
-- explore seasonal and monthly background conditions,
-- establish reproducible workflows for synoptic-scale analysis,
-- generate preliminary diagnostics to guide later stages.
+Stage 1 is divided into three sub-stages:
 
-This stage does **not** aim at final interpretation, but at building confidence in the data,
-methods, and feasibility of the planned analyses.
+- **Stage 1.1** — Initial exploratory analysis and percentile-based extremes using daily city-mean PM data.
+- **Stage 1.2** — Monthly composites and seasonal structure of PM extremes.
+- **Stage 1.3** — Harmonic diagnostics and comparison with official air-quality thresholds (NOM-172 and PCAA).
+
+The goal of this stage is **not** to establish causality, but to:
+- understand the structure of PM variability,
+- evaluate alternative episode definitions,
+- and converge toward a defensible and efficient methodology for Stage 2.
 
 ---
 
 ## Contents
 
-- **Monthly synoptic composites**  
-  Monthly p90-based event selection and 500-hPa geopotential height anomaly composites
-  using NARR reanalysis, including winds and significance masks.
+### Notebooks
+- `notebook_stage1_1.ipynb`  
+  Initial exploratory analysis (Stage 1.1):  
+  percentile-based extremes (p90/p10), daily city-mean PM data, and first monthly composites.
 
-- **Diurnal PM maxima diagnostics**  
-  Hourly RAMA data used to characterize the timing and magnitude of daily PM maxima
-  across months, as an exploratory indicator of accumulation and ventilation regimes.
+- `notebook_stage1_2&3.ipynb`  
+  Stage 1.2 and 1.3 analyses:
+  - Monthly composites of PM extremes.
+  - Diurnal and semidiurnal harmonic analysis (24h + 12h).
+  - Comparison between statistical extremes and official thresholds.
+  - Sensitivity analyses using hourly RAMA data.
+
+---
+
+### Presentations / summaries
+- `thesis_stage1_1.pdf`  
+  Presentation summarizing Stage 1.1 results.
+
+- `thesis_stage1_2.pdf`  
+  Presentation summarizing Stage 1.2 (monthly composites and seasonal structure).
+
+- `thesis_stage1_3.pdf`  
+  Presentation summarizing Stage 1.3 (harmonics, thresholds, and contingency-based composites).
+
+- `thesis_stage1_composites_summary.pdf`  
+  Comparative summary of three event-definition branches:
+  - **Branch A**: Percentile-based extremes (p90/p10) using daily city-mean PM data.
+  - **Branch B**: NOM-172 “Extremely Poor” thresholds using hourly RAMA data.
+  - **Branch C**: PCAA Phase I/II contingency thresholds (MA24) using hourly RAMA data.
+
+  This document was used to support the final methodological decision.
 
 ---
 
@@ -48,7 +73,7 @@ methods, and feasibility of the planned analyses.
 
 - **Air quality data (PM₂.₅, PM₁₀):**  
   RAMA (Red Automática de Monitoreo Atmosférico), Mexico City.  
-  Hourly station data aggregated to city-wide diagnostics.
+  Daily & Hourly station data aggregated to city-wide diagnostics.
 
 - **Meteorological data:**  
   NARR reanalysis (NOAA PSL).  
@@ -62,23 +87,35 @@ Raw data are not included in this repository due to size and access constraints.
 
 📂 stage1
 ┣ 📜 README.md
-┣ 📜 notebook_stage1.ipynb ← Reproducible analysis code
-┣ 📜 thesis_stage1.pdf ← Stage 1 presentation
+┣ 📜 notebook_stage1_1.ipynb ← Reproducible analysis code
+┣ 📜 thesis_stage1_1.pdf ← Stage 1.1 presentation
+┣ 📜 notebook_stage1_2&3.ipynb ← Reproducible analysis code
+┣ 📜 thesis_stage1_2.pdf ← Stage 1.2 presentation
+┣ 📜 thesis_stage1_3.pdf ← Stage 1.3 presentation
+┣ 📜 thesis_stage1_composites_summary.pdf ← Stage 1 composites summary presentation
 ┗ 📂 docs
 ┣ 📜 references_and_notes_stage1.md
 ┗ 📜 research_question_stage1.md
 
+---
+
+## Key outcomes of Stage 1
+
+- Percentile-based definitions (p90) provide **robust sample sizes** suitable for synoptic and ENSO-modulated analyses.
+- Official thresholds (NOM-172, PCAA) capture **rare tail events**, useful for policy comparison but insufficient as the main episode definition.
+- City-mean daily PM metrics are **better aligned with synoptic-scale circulation patterns** than station-based hourly maxima.
+
+**Decision:**  
+Stage 2 will proceed using **daily city-mean PM data (2012–2024)** with **percentile-based episode definitions (p90)**, while hourly RAMA-based analyses are retained as sensitivity and policy-oriented benchmarks.
 
 ---
 
-## Role within the thesis
+## Next stage
 
-Stage 1 corresponds to the **exploratory and setup phase** of the thesis.
-Its outputs guide the design of:
-- synoptic regime classification,
-- event-based composites,
-- intraseasonal diagnostics,
-- ENSO phase separation in later stages.
+Stage 2 will focus on:
+- Seasonal and monthly stratification of extreme PM episodes.
+- Refined monthly composites for episode-active periods.
+- Preparation for synoptic regime classification and lagged composites
 
 ---
 
@@ -86,8 +123,7 @@ Its outputs guide the design of:
 
 To ensure privacy and size limits:
 - Raw CSVs and NetCDFs are **not included** in this repository.  
-- All figures are available in the Stage 1 presentation (`thesis_stage1.pdf`); screenshots may be freely used with citation.  
-- Anyone interested in the datasets may contact me directly.
+- All figures are available in the Stage 1 presentations; screenshots may be freely used with citation.  
 
 ---
 
